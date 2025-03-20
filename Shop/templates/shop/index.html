@@ -1,5 +1,6 @@
 {% extends 'shop/base.html' %}
 {% block content %}
+{% load static %}
 
 
 <div class="container">
@@ -15,7 +16,7 @@
                     </div>
 
                     <div class="card-text">
-                        {{ product.price }}
+                        $ {{ product.price }}
                     </div>
 
                 </div>
