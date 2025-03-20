@@ -9,8 +9,12 @@ def index(request):
 
     products_object = Product.objects.all()
 
+    item_name = request.GET.get('item_name')
+    if item_name != '' and item_name is not None:
+        products_object = products_object.filter(title__icontains=item_name)
+
     context = {
         'products_object': products_object
     }
 
-    return render(request, 'shop\index.html', context)
+    return render(request, 'shop/index.html', context)
