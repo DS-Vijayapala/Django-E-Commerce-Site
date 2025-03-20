@@ -1,7 +1,8 @@
+""" This file contains the views for the shop app """
+
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import Product
-
-# Create your views here.
 
 
 def index(request):
@@ -9,9 +10,15 @@ def index(request):
 
     products_object = Product.objects.all()
 
+    # Search functionality
     item_name = request.GET.get('item_name')
     if item_name != '' and item_name is not None:
         products_object = products_object.filter(title__icontains=item_name)
+
+    # Pagination functionality
+    paginator = Paginator(products_object, 4)
+    page = request.GET.get('page')
+    products_object = paginator.get_page(page)
 
     context = {
         'products_object': products_object
