@@ -16,7 +16,7 @@ def index(request):
         products_object = products_object.filter(title__icontains=item_name)
 
     # Pagination functionality
-    paginator = Paginator(products_object, 4)
+    paginator = Paginator(products_object, 8)
     page = request.GET.get('page')
     products_object = paginator.get_page(page)
 
@@ -27,10 +27,10 @@ def index(request):
     return render(request, 'shop/index.html', context)
 
 
-def detail(request, product_id):
+def detail(request, id):
     """A view that displays the product detail page"""
 
-    product_object = Product.objects.get(id=product_id)
+    product_object = Product.objects.get(id=id)
 
     context = {
         'product_object': product_object
