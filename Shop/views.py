@@ -25,3 +25,15 @@ def index(request):
     }
 
     return render(request, 'shop/index.html', context)
+
+
+def detail(request, product_id):
+    """A view that displays the product detail page"""
+
+    product_object = Product.objects.get(id=product_id)
+
+    context = {
+        'product_object': product_object
+    }
+
+    return render(request, 'shop/detail.html', context)
