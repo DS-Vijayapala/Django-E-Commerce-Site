@@ -93,7 +93,13 @@
         document.getElementById('cart').innerHTML = "Cart (" + Object.keys(cart).length + ")";
 
 
+
+
+
     });
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 
 </script>
