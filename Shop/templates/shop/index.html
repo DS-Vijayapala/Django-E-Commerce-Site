@@ -21,7 +21,7 @@
 
                     <div class="card-text">
                         <a href="/{{ product.id }}" class="btn btn-warning">View</a>
-                        <button="" class="btn act btn-warning">Add to Cart</button>
+                        <button= id="{{ product.id }}" class="btn act btn-warning">Add to Cart</button>
                     </div>
 
                 </div>
@@ -76,6 +76,9 @@
     $(document).on('click', '.act', function () {
 
         console.log("clicked");
+
+        var item_id = this.id.toString();
+        console.log(item_id);
     });
 
 
