@@ -8,7 +8,7 @@ from .models import Product
 def index(request):
     """A view that displays the index page"""
 
-    products_object = Product.objects.all()
+    products_object = Product.objects.all().order_by('id')
 
     # Search functionality
     item_name = request.GET.get('item_name')

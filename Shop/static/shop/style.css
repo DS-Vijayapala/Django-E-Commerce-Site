@@ -14,3 +14,16 @@ body {
     font-weight: bold;
     color: rgb(29, 31, 29);
 }
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.search-bar {
+    width: 50%;
+}
+
+.signup_button {
+    background-color: #e2934e;
+    color: white;
+}

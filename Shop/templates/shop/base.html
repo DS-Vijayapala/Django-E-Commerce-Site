@@ -23,44 +23,67 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid m-5">
 
-        <div class="row w-100 justify-content-center">
+        <div class="row ">
 
             <div class="col-md-12">
 
-                <div class="card card-sm">
+                <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
 
-                    <div class="card-body row align-items-center">
+                    <div class="container-fluid px-3">
 
-                        <form class="d-flex justify-content-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="" alt="Avix Tecno Shop">
+                        </a>
 
-                            <div class="col-auto text-center">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                                <input type="search" placeholder="Search Product .." , name="item_name"
-                                    class="form-control form-control-borderless me-2  " style="width: 900px;">
-                            </div>
+                        <div class="collapse navbar-collapse" id="navbarNav">
 
-                            <div class="col-auto ">
+                            <form class="d-flex flex-grow-1">
+
+                                <input name="item_name" class="form-control me-2 search-bar" type="search"
+                                    placeholder="Search for anything">
 
                                 <button class="btn btn-success" type="submit">Search</button>
 
-                            </div>
+                            </form>
 
-                        </form>
+                            <ul class="navbar-nav ms-auto align-items-center">
+
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" href="#">Cart</a>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-outline-dark me-2" href="#">Log in</a>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-signup" href="#">Sign up</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
 
                     </div>
 
-                </div>
+                </nav>
 
             </div>
 
         </div>
 
     </div>
-
-
-
 
     {% block content %}
     {% endblock %}
