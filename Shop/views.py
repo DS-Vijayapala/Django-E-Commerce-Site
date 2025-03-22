@@ -37,3 +37,9 @@ def detail(request, id):
     }
 
     return render(request, 'shop/detail.html', context)
+
+
+def checkout(request):
+    """A view that displays the checkout page"""
+
+    return render(request, 'shop/checkout.html')

@@ -108,6 +108,7 @@
             cartindex += 1;
         }
 
+        cartString += "<a href='/checkout' class='btn btn-primary mt-2' id = 'checkout'>Checkout</a>";
         document.getElementById('cart').setAttribute('data-bs-content', cartString + "</div>");
     }
 
