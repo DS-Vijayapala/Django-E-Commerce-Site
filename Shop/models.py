@@ -34,6 +34,7 @@ class Order(models.Model):
     city = models.CharField(max_length=2000)
     state = models.CharField(max_length=2000)
     zip_code = models.CharField(max_length=200)
+    total = models.CharField(max_length=2000)
 
     def __str__(self):
         return self.name
