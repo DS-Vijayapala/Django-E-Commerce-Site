@@ -11,6 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
     """This class is used to customize the admin panel for the Product model"""
 
     list_display = ('title', 'price', 'discount_price', 'catogaory',)
+    search_fields = ('title', 'catogaory',)
 
 
 admin.site.register(Product, ProductAdmin)
