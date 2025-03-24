@@ -27,7 +27,7 @@ class Product(models.Model):
 class Order(models.Model):
     """ This model is used to store the order details """
 
-    items = models.CharField(max_length=1000, default='')
+    items = models.CharField(max_length=1000)
     name = models.CharField(max_length=2000)
     email = models.CharField(max_length=2000)
     address = models.CharField(max_length=3000)

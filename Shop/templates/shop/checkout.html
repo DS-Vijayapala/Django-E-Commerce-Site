@@ -36,6 +36,8 @@
 
                         {% csrf_token %}
 
+                        <input type="hidden" name="items" id="items">
+
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input id="name" name="name" type="text" class="form-control" placeholder="John Doe"
@@ -102,6 +104,8 @@
                 </li>`
         $('#List-of-cart-items').append(itemString);
     }
+
+    $('#items').val(JSON.stringify(cart));
 
 
 </script>
