@@ -6,5 +6,12 @@ admin.site.site_header = 'Avix Tecno Shop Admin Area'
 admin.site.site_title = 'Avix Tecno Shop'
 admin.site.index_title = 'Welcome to the Avix , '
 
-admin.site.register(Product)
+
+class ProductAdmin(admin.ModelAdmin):
+    """This class is used to customize the admin panel for the Product model"""
+
+    list_display = ('title', 'price', 'discount_price', 'catogaory',)
+
+
+admin.site.register(Product, ProductAdmin)
 admin.site.register(Order)
